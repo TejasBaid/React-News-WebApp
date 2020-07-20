@@ -12,10 +12,13 @@ export const Appbar = () => {
             </div>
             <div className='options'>
             <a className='option'  href='/'>
-                SHOP
+                Headlines
             </a>
             <a className='option'  href='/'>
-                CONTACT
+                Bookmarks
+            </a>
+            <a className='option'  href='/'>
+                Profile
             </a>
         </div>
         </div>
