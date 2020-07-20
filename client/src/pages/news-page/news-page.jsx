@@ -1,7 +1,8 @@
 import React from 'react'
-import { Categories } from '../../components/categories/categories'
-import { Channels } from '../../components/channels/channels'
+import { Articles } from '../../components/news_board/news'
+import { Sidebar } from '../../components/sidebar/sidebar'
 import { categories }   from '../../components/categories/category-list'
+import { NewsBoard } from '../../components/news_board/newsboard'
 import './news-page.scss'
 
 
@@ -10,7 +11,8 @@ export class NewsPage extends React.Component {
     constructor() {
         super()
         this.state = {
-            categoryList : categories
+            categoryList : categories,
+            Articles : Articles,
              
         }
     }
@@ -18,9 +20,13 @@ export class NewsPage extends React.Component {
     render() {
         return (
             <div className ="content">
-
-                <Channels />
-                <Categories categoryList = {this.state.categoryList} />
+                <div className="side">
+                <Sidebar categoryList = {this.state.categoryList} />
+                </div>
+                <div className="news-board">
+                    <NewsBoard articles = {this.state.Articles}  />
+                </div>
+                
                 
             </div>
             
