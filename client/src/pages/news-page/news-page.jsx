@@ -1,5 +1,6 @@
 import React from 'react'
-import { Articles } from '../../components/news_board/news'
+import axios from 'axios';
+
 import { Sidebar } from '../../components/sidebar/sidebar'
 import { categories }   from '../../components/categories/category-list'
 import { NewsBoard } from '../../components/news_board/newsboard'
@@ -12,10 +13,21 @@ export class NewsPage extends React.Component {
         super()
         this.state = {
             categoryList : categories,
-            Articles : Articles,
+            articles : [],
              
         }
+        
     }
+    
+    componentDidMount() {
+        axios.get(`http://newsapi.org/v2/top-headlines?country=in&apiKey=212db4bb333a4c68a374ae5fad3c2300`)
+          .then(res => {
+            const persons = res.data;
+            console.log(persons)
+            this.setState({ articles:persons.articles });
+          })
+      }
+    
     
     render() {
         return (
@@ -24,7 +36,7 @@ export class NewsPage extends React.Component {
                 <Sidebar categoryList = {this.state.categoryList} />
                 </div>
                 <div className="news-board">
-                    <NewsBoard articles = {this.state.Articles}  />
+                    <NewsBoard articles = {this.state.articles}  />
                 </div>
                 
                 
