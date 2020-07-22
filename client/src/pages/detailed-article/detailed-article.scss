@@ -1,0 +1,33 @@
+body{
+    background-color: #e8ebf0;
+}
+.detailed-page{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+
+    
+}
+.article-container-da{
+    border-radius: 10px;
+    width: 60vw;
+    height: min-content;
+    margin-bottom: 10vw;
+    background-color: white;
+    padding: 20px;
+    
+}
+.headline-text{
+    line-height: 1.2;
+    font-size: 1.7vw;
+}
+.description-text{
+    line-height: 1.5;
+    font-size: 1vw;
+    opacity: 70%;
+}
+.image-container img{
+    width: 60vw;
+    border-radius: 10px;
+}
