@@ -5,9 +5,9 @@ import './sidebar.scss'
 
 export const Sidebar = (props) => {
     return(
-        <div>
+        <div className="sidebar-holder">
             <Channels />
-            <Categories categoryList = { props.categoryList } />
+            <Categories categoryList = { props.categoryList } listChange = {props.listChange} />
         </div>
         
 

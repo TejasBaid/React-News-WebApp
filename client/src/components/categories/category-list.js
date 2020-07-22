@@ -1,13 +1,11 @@
 export const categories = [
-    { name : "International"},
-    {   name : "Local"},
-    {   name : "Business"},
-    {   name : "Technology"},
-    {   name : "Politics"},
-    {   name : "Health"},
-    {   name : "Science"},
-    {   name : "Environment"},
-    {   name : "Sports"},
-    {   name : "Lifestyle"},
+    {   name : "Business",ep:"business"},
+    {   name : "Technology",ep:"technology"},
+    {   name : "General",ep:"general"},
+    {   name : "Health",ep:"health"},
+    {   name : "Science",ep:"health"},
+    {   name:"Entertainment",ep:"entertainment" },
+    {   name : "Sports",ep:"sports"},
+    
     
 ]

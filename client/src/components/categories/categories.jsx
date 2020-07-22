@@ -10,7 +10,7 @@ export const Categories= (props) => {
                 </div>
                 <div className="category-list">
                 {props.categoryList.map((category) => (
-                    <p className="category" >{category.name}</p>
+                    <p className="category" onClick= {() => props.listChange(category.ep, category.name)} >{category.name}</p>
                 ))}
                 </div>
             </div>
